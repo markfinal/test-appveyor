@@ -11,5 +11,5 @@ for:
         - job_name: Ubuntu 18
 build: off
 test_script:
-  - sh: source env.sh Provided
-  - sh: source env.sh
+  - sh: echo Provide a value to the script... && source env.sh Provided
+  - sh: echo Rely on default value in the script ... && source env.sh
