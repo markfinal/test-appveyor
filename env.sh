@@ -1,6 +1,5 @@
 #!/bin/bash
 
-DefaultFlavour=Release
-flavour=${1:-$DefaultFlavour}
+flavour=${1:-Release}
 
 echo Flavour is $flavour
