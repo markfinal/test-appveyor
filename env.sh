@@ -2,4 +2,4 @@
 
 firstArg=${1:-DefaultValue}
 
-echo First argument has a value $flavour
+echo First script argument has a value of $firstArg
