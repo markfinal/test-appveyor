@@ -1,5 +1,5 @@
 #!/bin/bash
 
-flavour=${1:-Release}
+firstArg=${1:-DefaultValue}
 
-echo Flavour is $flavour
+echo First argument has a value $flavour
