@@ -1,0 +1,19 @@
+clone_depth: 10
+configuration: Release
+platform: AnyCPU
+environment:
+  matrix:
+  - job_name: Ubuntu 18 (GCC 9) Native
+    APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu1804
+for:
+  - matrix:
+      only:
+        - job_name: Ubuntu 18 (GCC 9) Native
+    environment:
+      BAM_BUILD_MODE: Native
+      GCC_VERSION: 9
+    before_test:
+      - sh: sudo ~/CI/ubuntu_install_scripts/gcc9.sh
+build: off
+test_script:
+  - sh: source env.sh
