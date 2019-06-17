@@ -7,6 +7,10 @@ environment:
     APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu1804
   - job_name: Ubuntu 18 (old)
     APPVEYOR_BUILD_WORKER_IMAGE: Previous Ubuntu1804
+  - job_name: Ubuntu 16
+    APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu1604
+  - job_name: Ubuntu 16 (old)
+    APPVEYOR_BUILD_WORKER_IMAGE: Previous Ubuntu1604
 for:
   - matrix:
       only:
@@ -14,6 +18,12 @@ for:
   - matrix:
       only:
         - job_name: Ubuntu 18 (old)
+  - matrix:
+      only:
+        - job_name: Ubuntu 16
+  - matrix:
+      only:
+        - job_name: Ubuntu 16 (old)
 build: off
 test_script:
   - sh: echo Provide a value to the script... && source env.sh Provided
