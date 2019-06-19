@@ -26,5 +26,6 @@ for:
         - job_name: Ubuntu 16 (old)
 build: off
 test_script:
+  - sh: shift # remove the first argument of the shell that Appveyor commands are written in
   - sh: echo Provide a value to the script... && source env.sh Provided
   - sh: echo Rely on default value in the script ... && source env.sh
